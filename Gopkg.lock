@@ -10,12 +10,12 @@
   revision = "3a771d992973f24aa725d07868b467d1ddfceafb"
 
 [[projects]]
-  digest = "1:cf4f5171128e62b46299b0a7cd79543f50e62f483d2ca9364e4957c7bbee7a38"
+  digest = "1:93147eb1d6f08d39f2c0efe3d29ee043bda72be7a8b3b367eb08c72c18524638"
   name = "github.com/container-storage-interface/spec"
-  packages = ["lib/go/csi/v0"]
+  packages = ["lib/go/csi"]
   pruneopts = ""
-  revision = "2178fdeea87f1150a17a63252eee28d4d8141f72"
-  version = "v0.3.0"
+  revision = "ed0bb0e1557548aa028307f48728767cfe8f6345"
+  version = "v1.0.0"
 
 [[projects]]
   digest = "1:0deddd908b6b4b768cfc272c16ee61e7088a60f7fe2f06c547bd3d8e1f8b8e77"
@@ -57,6 +57,7 @@
   name = "github.com/golang/protobuf"
   packages = [
     "proto",
+    "protoc-gen-go/descriptor",
     "ptypes",
     "ptypes/any",
     "ptypes/duration",
@@ -268,25 +269,25 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:790c83515921619a461cf47449bbdd5f58e35f689edc8164262cce7db4ae29ca"
+  digest = "1:f059b0adae6e4630f111d471f127fe69de1f5689ce35465bab387d646c17eb97"
   name = "golang.org/x/oauth2"
   packages = [
     ".",
     "internal",
   ]
   pruneopts = ""
-  revision = "36a7019397c4c86cf59eeab3bc0d188bac444277"
+  revision = "5dab4167f31cbd76b407f1486c86b40748bc5073"
 
 [[projects]]
   branch = "master"
-  digest = "1:69b7ecfaddca30f8e8d97798822ff2b8ddfa7634ed16661561b54f30c63c2a42"
+  digest = "1:057806b6e218f4ceac80d27ccd8dd80b2c06b0050289aa46e0edfd82cc4faa2c"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = ""
-  revision = "a457fd036447854c0c02e89ea439481bdcf941a2"
+  revision = "11f53e03133963fb11ae0588e08b5e0b85be8be5"
 
 [[projects]]
   digest = "1:5acd3512b047305d49e8763eef7ba423901e85d5dd2fd1e71778a0ea8de10bd4"
@@ -344,7 +345,7 @@
   revision = "db91494dd46c1fdcbbde05e5ff5eb56df8f7d79a"
 
 [[projects]]
-  digest = "1:d141efe4aaad714e3059c340901aab3147b6253e58c85dafbcca3dd8b0e88ad6"
+  digest = "1:39d4d828b87d58d114fdc211f0638f32dcae84019fe17d6b48f9b697f4b60213"
   name = "google.golang.org/grpc"
   packages = [
     ".",
@@ -380,8 +381,8 @@
     "tap",
   ]
   pruneopts = ""
-  revision = "df014850f6dee74ba2fc94874043a9f3f75fbfd8"
-  version = "v1.17.0"
+  revision = "a02b0774206b209466313a0b525d2c738fe407eb"
+  version = "v1.18.0"
 
 [[projects]]
   digest = "1:75fb3fcfc73a8c723efde7777b40e8e8ff9babf30d8c56160d01beffea8a95a6"
@@ -442,11 +443,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:5d2d73215670ab3c3eb7d9615afd9e4efa9a4272c5776a741bea888987dd7e05"
+  digest = "1:8646aa6595e0925ecb9fe2045b5501591e16aff7e8592df0a68a45f835fc2655"
   name = "k8s.io/apiextensions-apiserver"
   packages = ["pkg/features"]
   pruneopts = ""
-  revision = "e7617803acebe420667bef11e88bb17f0f3a57d3"
+  revision = "cf30b7cf64c2979f27127ba17706f30a3489337c"
 
 [[projects]]
   branch = "master"
@@ -501,14 +502,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:3d282bb595563315bcf1f59bf74a111d7b371d2ff64a97f40bba568abdf4cd66"
+  digest = "1:39acd05f7f6d6885decb56fa29d3c83491c412a0327a185510d888d08467561d"
   name = "k8s.io/apiserver"
   packages = [
     "pkg/features",
     "pkg/util/feature",
   ]
   pruneopts = ""
-  revision = "d55c9aeff1eb84a895d836370e380b019edfa007"
+  revision = "c688f42695b9cc315cc3474b86704ea6b088479f"
 
 [[projects]]
   digest = "1:96ab89894f66b77a0137bba12e607c6a9be992acadfb075b5602939e8519a157"
@@ -679,11 +680,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:e5d4ca90c0f3862515c98454bb37d4d340f4ceeca60ac3e0a5cb5857360aed7c"
+  digest = "1:435c51abc59eaaf5058eb6fd185a21a2ec181f34c56aaae9a24d37705f194e65"
   name = "k8s.io/kube-openapi"
   packages = ["pkg/util/proto"]
   pruneopts = ""
-  revision = "0317810137be915b9cf888946c6e115c1bfac693"
+  revision = "ced9eb3070a5f1c548ef46e8dfe2a97c208d9f03"
 
 [[projects]]
   digest = "1:9ac53939e57f04ea4886ed3c7b23612c65258de122c028a6c5ee8f9bdc0c51dd"
@@ -732,7 +733,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/container-storage-interface/spec/lib/go/csi/v0",
+    "github.com/container-storage-interface/spec/lib/go/csi",
     "github.com/golang/glog",
     "github.com/kubernetes-csi/csi-lib-fc/fibrechannel",
     "github.com/spf13/cobra",
