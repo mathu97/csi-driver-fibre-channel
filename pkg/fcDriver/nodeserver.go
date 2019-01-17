@@ -16,7 +16,7 @@ limitations under the License.
 package fc
 
 import (
-	"github.com/container-storage-interface/spec/lib/go/csi/v0"
+	"github.com/container-storage-interface/spec/lib/go/csi"
 	"github.com/kubernetes-csi/csi-lib-fc/fibrechannel"
 	"golang.org/x/net/context"
 )
@@ -80,11 +80,16 @@ func (ns *fcNodeServer) NodeGetCapabilities(context.Context, *csi.NodeGetCapabil
 	}, nil
 }
 
-func (ns *fcNodeServer) NodeGetId(ctx context.Context, req *csi.NodeGetIdRequest) (*csi.NodeGetIdResponse, error) {
-	return &csi.NodeGetIdResponse{
-		NodeId: ns.Driver.nodeID,
-	}, nil
+func (ns *fcNodeServer) NodeGetVolumeStats(ctx context.Context, req *csi.NodeGetVolumeStatsRequest) (*csi.NodeGetVolumeStatsResponse, error) {
+	return &csi.NodeGetVolumeStatsResponse{}, nil
 }
+
+// Seems to be deprecated in CSI v1.0
+//func (ns *fcNodeServer) NodeGetId(ctx context.Context, req *csi.NodeGetIdRequest) (*csi.NodeGetIdResponse, error) {
+//	return &csi.NodeGetIdResponse{
+//		NodeId: ns.Driver.nodeID,
+//	}, nil
+//}
 
 func (ns *fcNodeServer) NodeGetInfo(ctx context.Context, req *csi.NodeGetInfoRequest) (*csi.NodeGetInfoResponse, error) {
 	return &csi.NodeGetInfoResponse{
