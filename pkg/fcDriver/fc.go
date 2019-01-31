@@ -33,7 +33,7 @@ func getFCInfo(req *csi.NodePublishVolumeRequest) (*fcDevice, error) {
 	volName := req.GetVolumeId()
 	lun := req.GetVolumeContext()["lun"]
 	targetWWNs := req.GetVolumeContext()["targetWWNs"]
-	wwids := req.GetPublishContext()["WWIDs"]
+	wwids := req.GetVolumeContext()["WWIDs"]
 
 	if lun == "" || (targetWWNs == "" && wwids == "") {
 		return nil, fmt.Errorf("FC target information is missing")
